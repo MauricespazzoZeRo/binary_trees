@@ -20,7 +20,7 @@ int binary_tree_is_full(const binary_tree_t *tree)
 	if (tree->left != NULL && tree->right != NULL)
 	{
 		/* recursively check both sub-nodes or sub-trees */
-		all = binary_tree_is_full(tree->left)&&binary_tree_is_full(tree->right);
+		all = binary_tree_is_full(tree->left) && binary_tree_is_full(tree->right);
 
 		return (all);
 	}

@@ -13,6 +13,7 @@ binary_tree_t *binary_tree_sibling(binary_tree_t *node)
 		return (NULL); /* If the node or its parent is NULL, return NULL */
 
 	binary_tree_t *parent = node->parent;
+
 	if (parent->left == node)
 	{
 	  /* Return the right child as the sibling if the node is the left child */

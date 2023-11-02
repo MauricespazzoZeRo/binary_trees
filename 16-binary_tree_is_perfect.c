@@ -4,32 +4,33 @@
  * binary_tree_is_perfect - Check if a binary tree is perfect.
  * @tree: Pointer to the root node of the tree.
  *
- * Return: 1 if the tree is perfect, 0 otherwise or if the tree is empty (NULL).
+ * Return: 1 if the tree is perfect, 0 otherwise or if the tree is empty (NULL)
  */
 int binary_tree_is_perfect(const binary_tree_t *tree)
 {
 	int left_depth, right_depth;
 
 	if (tree == NULL)
-		return 0;
+		return (0);
 
 	if (tree->left == NULL && tree->right == NULL)
-		return 1;  /* Leaf node */
+		return (1);  /* Leaf node */
 
 	if (tree->left == NULL || tree->right == NULL)
-		return 0;  /* Not perfect (missing child) */
+		return (0);  /* Not perfect (missing child) */
 
 	/* Recursively check the left and right subtrees */
-	if (!binary_tree_is_perfect(tree->left) || !binary_tree_is_perfect(tree->right))
-		return 0;  /* Subtrees are not perfect */
+	if (!binary_tree_is_perfect(tree->left) ||
+		!binary_tree_is_perfect(tree->right))
+		return (0);  /* Subtrees are not perfect */
 
 	left_depth = binary_tree_depth(tree->left);
 	right_depth = binary_tree_depth(tree->right);
 
 	if (left_depth == right_depth)
-		return 1;  /* Left and right subtrees have the same depth */
+		return (1);  /* Left and right subtrees have the same depth */
 
-	return 0;  /* Left and right subtrees have different depths */
+	return (0);  /* Left and right subtrees have different depths */
 }
 
 /**
@@ -48,5 +49,5 @@ size_t binary_tree_depth(const binary_tree_t *tree)
 		tree = tree->parent;
 	}
 
-	return depth;
+	return (depth);
 }
