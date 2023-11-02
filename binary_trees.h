@@ -1,6 +1,13 @@
 #ifndef BINARY_TREES
 #define BINARY_TREES
 
+#include <stdarg.h>
+#include <unistd.h>
+#include <stdio.h>
+#include <sys/wait.h>
+#include <sys/types.h>
+#include <limits.h>
+#include <string.h>
 #include <stdlib.h>
 
 /* Basic Binary Tree */
